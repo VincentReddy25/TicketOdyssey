@@ -75,7 +75,7 @@ interface Travel extends Kerala, Goa, TamilNadu, HimachalPradesh, colourcode {
 	}
 
 	static void TransportationWithinState(char stateType) {
-		System.out.println(RESET+YELLOW+"\n1.trains");
+		System.out.println(YELLOW+"\n1.trains");
 		System.out.println("2.Bus");
 		System.out.println("3.Cab"+RESET);
 
@@ -101,7 +101,7 @@ interface Travel extends Kerala, Goa, TamilNadu, HimachalPradesh, colourcode {
 	}
 
 	static void TransportationOutSideState(char stateType) {
-		System.out.println(RESET+YELLOW+"\n1.Flight");
+		System.out.println(YELLOW+"\n1.Flight");
 		System.out.println("2.trains");
 		System.out.println("3.Bus");
 		System.out.println("4.Cab");
@@ -132,7 +132,7 @@ interface Travel extends Kerala, Goa, TamilNadu, HimachalPradesh, colourcode {
 
 	static void IntraStateTravel(char transport, char stateType) {
 		
-		System.out.println(RESET+PURPLE+"\n1.Telangana");
+		System.out.println(PURPLE+"\n1.Telangana");
 		System.out.println("2.Kerala");
 		System.out.println("3.Goa");
 		System.out.println("4.TamilNadu");
@@ -173,7 +173,7 @@ interface Travel extends Kerala, Goa, TamilNadu, HimachalPradesh, colourcode {
 	}
 
 	static void InterStateTravel(char transport, char stateType) {
-		System.out.println(RESET+PURPLE+"\n1.Telangana");
+		System.out.println(PURPLE+"\n1.Telangana");
 		System.out.println("2.Kerala");
 		System.out.println("3.Goa");
 		System.out.println("4.Back"+RESET);
@@ -205,7 +205,7 @@ interface Travel extends Kerala, Goa, TamilNadu, HimachalPradesh, colourcode {
 	}
 
 	static void TelanganaStartingPoints(char transport, char stateType, char stateNum) {
-		System.out.println(RESET+BLUE+"\n1.Hyderabad");
+		System.out.println(BLUE+"\n1.Hyderabad");
 		System.out.println("2.Warangal");
 		System.out.println("3.Yadadri Buvanagiri"+RESET);
 
@@ -230,7 +230,7 @@ interface Travel extends Kerala, Goa, TamilNadu, HimachalPradesh, colourcode {
 	}
 
 	static void TelanganaDestinationPoints(char cityNum1, char transport) {
-		System.out.println(RESET+BLUE+"\n1.Hyderabad");
+		System.out.println(BLUE+"\n1.Hyderabad");
 		System.out.println("2.Warangal");
 		System.out.println("3.Yadadri Buvanagiri"+RESET);
 
@@ -267,6 +267,8 @@ interface Travel extends Kerala, Goa, TamilNadu, HimachalPradesh, colourcode {
 
 		int TicketPrice = 0;
 
+
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -287,7 +289,8 @@ interface Travel extends Kerala, Goa, TamilNadu, HimachalPradesh, colourcode {
 	static void TicketPriceBus(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
-		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: \n"+RESET);
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
+		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
 		if ((cityNum1 == '1' || cityNum1 == '2') && (cityNum2 == '1' || cityNum2 == '2')) {
@@ -307,7 +310,8 @@ interface Travel extends Kerala, Goa, TamilNadu, HimachalPradesh, colourcode {
 	static void TicketPriceCab(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
-		System.out.print("\nEnter Number Of Tickets You Want To Book: \n");
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
+		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
 		if ((cityNum1 == '1' || cityNum1 == '2') && (cityNum2 == '1' || cityNum2 == '2')) {
@@ -327,9 +331,9 @@ interface Travel extends Kerala, Goa, TamilNadu, HimachalPradesh, colourcode {
 
 interface HimachalPradesh extends colourcode {
 	static void HimachalPradeshStartingPoints(char transport, char stateType, char stateNum) {
-		System.out.println("\n1.Shimla");
+		System.out.println(BLUE+"\n1.Shimla");
 		System.out.println("2.Manali");
-		System.out.println("3.Dharamshala\n");
+		System.out.println("3.Dharamshala"+RESET);
 
 		System.out.print(CYAN+"\n> Select The City You Want To Start The Journey: "+RESET);
 
@@ -347,11 +351,11 @@ interface HimachalPradesh extends colourcode {
 	}
 
 	static void HimachalPradeshDestinationPoints(char cityNum1, char transport) {
-		System.out.println("\n 1.Shimla");
+		System.out.println(BLUE+"\n 1.Shimla");
 		System.out.println("2.Manali");
-		System.out.println("3.Dharamshala");
+		System.out.println("3.Dharamshala"+RESET);
 
-		System.out.print(CYAN+"\n> Select The Destination Point: "+RESET);
+		System.out.print(CYAN+"> Select The Destination Point: "+RESET);
 
 		char cityNum2 = MobileOTPVarification.sc.next().charAt(0);
 		if (cityNum2 >= '1' && cityNum2 <= '3') {
@@ -380,7 +384,8 @@ interface HimachalPradesh extends colourcode {
 	static void TicketPriceTrain(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
-		System.out.print("\n> Enter Number Of Tickets You Want To Book: ");
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
+		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
 		if ((cityNum1 == '1' || cityNum1 == '2') && (cityNum2 == '1' || cityNum2 == '2')) {
@@ -401,6 +406,7 @@ interface HimachalPradesh extends colourcode {
 	static void TicketPriceBus(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -424,6 +430,7 @@ interface HimachalPradesh extends colourcode {
 	static void TicketPriceCab(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -447,9 +454,9 @@ interface HimachalPradesh extends colourcode {
 
 interface Kerala extends colourcode {
 	static void KeralaStartingPoints(char transport, char stateType, char stateNum) {
-		System.out.println("\n 1.Thiruvananthapuram");
+		System.out.println(BLUE+"\n 1.Thiruvananthapuram");
 		System.out.println("2.Alleppey");
-		System.out.println("3.wayanad");
+		System.out.println("3.wayanad"+RESET);
 
 		System.out.print(CYAN+"\n> Select The City You Want To Start The Journey: "+RESET);
 
@@ -471,9 +478,9 @@ interface Kerala extends colourcode {
 	}
 
 	static void KeralaDestinationPoints(char cityNum1, char transport) {
-		System.out.println("\n1.Thiruvananthapuram");
+		System.out.println(BLUE+"\n1.Thiruvananthapuram");
 		System.out.println("2.Alleppey");
-		System.out.println("3.wayanad");
+		System.out.println("3.wayanad"+RESET);
 
 		System.out.print(CYAN+"> Select The Destination Point: "+RESET);
 
@@ -507,6 +514,7 @@ interface Kerala extends colourcode {
 	static void TicketPriceTrain(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -530,6 +538,7 @@ interface Kerala extends colourcode {
 	static void TicketPriceBus(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -553,6 +562,7 @@ interface Kerala extends colourcode {
 	static void TicketPriceCab(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -575,11 +585,11 @@ interface Kerala extends colourcode {
 
 interface TamilNadu extends colourcode{
 	static void TamilNaduStartingPoints(char transport, char stateType, char stateNum) {
-		System.out.println("1.Chennai");
+		System.out.println(BLUE+"\n1.Chennai");
 		System.out.println("2.kanyakumari");
 		System.out.println("3.Madurai");
 		System.out.println("4.Rameshwaram");
-		System.out.println("5.Coiambatore");
+		System.out.println("5.Coiambatore"+RESET);
 
 		System.out.print(CYAN+"> Select The City You Want To Start The Journey: "+RESET);
 
@@ -600,11 +610,11 @@ interface TamilNadu extends colourcode{
 
 	static void TamilNaduDestinationPoints(char cityNum1, char transport) {
 
-		System.out.println("1.Chennai");
+		System.out.println(BLUE+"\n1.Chennai");
 		System.out.println("2.kanyakumari");
 		System.out.println("3.Madurai");
 		System.out.println("4.Rameshwaram");
-		System.out.println("5.Coiambatore");
+		System.out.println("5.Coiambatore"+RESET);
 
 		System.out.print(CYAN+"> Select The Destination Point: "+RESET);
 
@@ -637,7 +647,8 @@ interface TamilNadu extends colourcode{
 	static void TicketPriceTrain(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
-		System.out.println("> Enter Number Of Tickets You Want To Book: ");
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
+		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
 		if ((cityNum1 == '1' || cityNum1 == '2') && (cityNum2 == '1' || cityNum2 == '2')) {
@@ -658,9 +669,19 @@ interface TamilNadu extends colourcode{
 		} else if ((cityNum1 == '5' || cityNum1 == '3') && (cityNum2 == '3' || cityNum2 == '5')) {
 			TicketPrice = 225;
 			System.out.println("\nTicket Price for " + tc + " tickets: " + (TicketPrice * (tc - 48)));
+		} else if ((cityNum1 == '1' || cityNum1 == '3') && (cityNum2 == '1' || cityNum2 == '3')) {
+			TicketPrice = 225;
+			System.out.println("\nTicket Price for " + tc + " tickets: " + (TicketPrice * (tc - 48)));
+		} else if ((cityNum1 == '1' || cityNum1 == '4') && (cityNum2 == '1' || cityNum2 == '4')) {
+			TicketPrice = 225;
+			System.out.println("\nTicket Price for " + tc + " tickets: " + (TicketPrice * (tc - 48)));
+		} else if ((cityNum1 == '2' || cityNum1 == '4') && (cityNum2 == '2' || cityNum2 == '4')) {
+			TicketPrice = 225;
+			System.out.println("\nTicket Price for " + tc + " tickets: " + (TicketPrice * (tc - 48)));
+		} else if ((cityNum1 == '2' || cityNum1 == '5') && (cityNum2 == '2' || cityNum2 == '5')) {
+			TicketPrice = 225;
+			System.out.println("\nTicket Price for " + tc + " tickets: " + (TicketPrice * (tc - 48)));
 		}
-
-
 
 		Payment.run();
 
@@ -669,6 +690,7 @@ interface TamilNadu extends colourcode{
 	static void TicketPriceBus(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -713,6 +735,7 @@ interface TamilNadu extends colourcode{
 	static void TicketPriceCab(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -734,7 +757,16 @@ interface TamilNadu extends colourcode{
 		} else if ((cityNum1 == '5' || cityNum1 == '3') && (cityNum2 == '3' || cityNum2 == '5')) {
 			TicketPrice = 225;
 			System.out.println("\nTicket Price for " + tc + " tickets: " + (TicketPrice * (tc - 48)));
-		}
+		} else if ((cityNum1 == '1' || cityNum1 == '3') && (cityNum2 == '1' || cityNum2 == '3')) {
+			TicketPrice = 225;
+			System.out.println("\nTicket Price for " + tc + " tickets: " + (TicketPrice * (tc - 48)));
+		} else if ((cityNum1 == '2' || cityNum1 == '4') && (cityNum2 == '2' || cityNum2 == '4')) {
+			TicketPrice = 225;
+			System.out.println("\nTicket Price for " + tc + " tickets: " + (TicketPrice * (tc - 48)));
+		} else if ((cityNum1 == '2' || cityNum1 == '5') && (cityNum2 == '2' || cityNum2 == '5')) {
+			TicketPrice = 225;
+			System.out.println("\nTicket Price for " + tc + " tickets: " + (TicketPrice * (tc - 48)));
+		} 
 		Payment.run();
 	}
 }
@@ -742,10 +774,10 @@ interface TamilNadu extends colourcode{
 interface Goa extends colourcode{
 
 	static void GoaStartingPoints(char transport, char stateType, char stateNum) {
-		System.out.println("1.Bardez");
+		System.out.println(BLUE+"\n1.Bardez");
 		System.out.println("2.Pernem");
 		System.out.println("3.Mormugoa");
-		System.out.println("4.Sanguem");
+		System.out.println("4.Sanguem"+RESET);
 
 		System.out.print(CYAN+"> Select The City You Want To Start The Journey: "+RESET);
 
@@ -765,10 +797,10 @@ interface Goa extends colourcode{
 	}
 
 	static void GoaDestinationPoints(char cityNum1, char transport) {
-		System.out.println("1.Bardez");
+		System.out.println(BLUE+"\n1.Bardez");
 		System.out.println("2.Pernem");
 		System.out.println("3.Mormugoa");
-		System.out.println("4.Sanguem");
+		System.out.println("4.Sanguem"+RESET);
 
 		System.out.print(CYAN+"> Select The Destination Point: "+RESET);
 		char cityNum2 = MobileOTPVarification.sc.next().charAt(0);
@@ -799,6 +831,7 @@ interface Goa extends colourcode{
 	static void TicketPriceTrain(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -828,6 +861,7 @@ interface Goa extends colourcode{
 	static void TicketPriceBus(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 		if ((cityNum1 == '1' || cityNum1 == '2') && (cityNum2 == '1' || cityNum2 == '2')) {
@@ -855,6 +889,7 @@ interface Goa extends colourcode{
 	static void TicketPriceCab(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 		if ((cityNum1 == '1' || cityNum1 == '2') && (cityNum2 == '1' || cityNum2 == '2')) {
@@ -883,7 +918,7 @@ interface Goa extends colourcode{
 class Interstate implements Travel{
 
 	static void InterStateTravel(char transport, char stateType, char stateNum, char cityNum1) {
-		System.out.println(RESET+PURPLE+"\n1.Telangana");
+		System.out.println(PURPLE+"\n1.Telangana");
 		System.out.println("2.Kerala");	
 		System.out.println("3.Goa");
 		System.out.println("4. Back"+RESET);
@@ -894,7 +929,7 @@ class Interstate implements Travel{
 
 		if (n >= '1' && n <= '4') {
 			if (n == stateNum) {
-				System.out.println("* * * Please Choose Other State * * *");
+				System.out.println(RED+"* * * Please Choose Other State * * *"+RESET);
 				InterStateTravel(transport, stateType, stateNum, cityNum1);
 			} else {
 				switch (n) {
@@ -973,7 +1008,7 @@ class Interstate implements Travel{
 		System.out.println("2.Warangal");
 		System.out.println("3.Yadadri Buvanagiri"+RESET);
 
-		System.out.print("`> Select The Destination Point: ");
+		System.out.print(CYAN+"> Select The Destination Point: "+RESET);
 
 		char cityNum2 = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1015,6 +1050,7 @@ class Interstate implements Travel{
 	static void KeralaToTelanganaTicketPriceTrain(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1052,6 +1088,7 @@ class Interstate implements Travel{
 	static void KeralaToTelanganaTicketPriceBus(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1092,6 +1129,7 @@ class Interstate implements Travel{
 	static void KeralaToTelanganaTicketPriceCab(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1130,6 +1168,7 @@ class Interstate implements Travel{
 	static void KeralaToTelanganaTicketPriceFlight(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1188,6 +1227,7 @@ class Interstate implements Travel{
 	static void GoaToTelanganaTicketPriceTrain(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1225,6 +1265,7 @@ class Interstate implements Travel{
 	static void GoaToTelanganaTicketPriceBus(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1263,6 +1304,7 @@ class Interstate implements Travel{
 	static void GoaToTelanganaTicketPriceCab(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1302,6 +1344,7 @@ class Interstate implements Travel{
 	static void GoaToTelanganaTicketPriceFlight(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1359,6 +1402,7 @@ class Interstate implements Travel{
 	static void KeralaToGoaTicketPriceTrain(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1397,6 +1441,7 @@ class Interstate implements Travel{
 	static void KeralaToGoaTicketPriceBus(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1435,6 +1480,7 @@ class Interstate implements Travel{
 	static void KeralaToGoaTicketPriceCab(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1473,6 +1519,7 @@ class Interstate implements Travel{
 	static void KeralaToGoaTicketPriceFlight(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1530,6 +1577,7 @@ class Interstate implements Travel{
 	static void TelenganaToGoaTicketPriceTrain(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 		if ((cityNum1 == '1') && (cityNum2 == '1')) {
@@ -1567,6 +1615,7 @@ class Interstate implements Travel{
 	static void TelenganaToGoaTicketPriceBus(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1605,6 +1654,7 @@ class Interstate implements Travel{
 	static void TelenganaToGoaTicketPriceCab(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1643,6 +1693,7 @@ class Interstate implements Travel{
 	static void TelenganaToGoaTicketPriceFlight(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1718,6 +1769,7 @@ class Interstate implements Travel{
 	static void GoaTokeralaTicketPriceTrain(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1756,6 +1808,7 @@ class Interstate implements Travel{
 	static void GoaTokeralaTicketPriceBus(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1794,6 +1847,7 @@ class Interstate implements Travel{
 	static void GoaTokeralaTicketPriceCab(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 		if ((cityNum1 == '1') && (cityNum2 == '1')) {
@@ -1831,6 +1885,7 @@ class Interstate implements Travel{
 	static void GoaTokeralaTicketPriceFlight(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 		if ((cityNum1 == '1') && (cityNum2 == '1')) {
@@ -1868,6 +1923,7 @@ class Interstate implements Travel{
 	static void TicketPriceTrain(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1906,6 +1962,7 @@ class Interstate implements Travel{
 	static void TicketPriceBus(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1944,6 +2001,7 @@ class Interstate implements Travel{
 	static void TicketPriceCab(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 
@@ -1982,6 +2040,7 @@ class Interstate implements Travel{
 	static void TicketPriceFlight(char cityNum1, char cityNum2) {
 		int TicketPrice = 0;
 
+		System.out.println(PURPLE+"\nNOTE: If in case you entered 300 I takes only the first number (300 == 3) !!! ^ v ^"+RESET);
 		System.out.print(CYAN+"\n> Enter Number Of Tickets You Want To Book: "+RESET);
 		char tc = MobileOTPVarification.sc.next().charAt(0);
 

@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Payment{
+class Payment implements colourcode{
 
     static Scanner sc = new Scanner(System.in);
 
@@ -8,31 +8,31 @@ class Payment{
 
     static void proceedToPay() {
         while (true) {
-            System.out.print("> Enter Mobile Number: ");
+            System.out.print(BLUE+"> Enter Mobile Number: "+RESET);
             mbNo = sc.next();
             if(mbNo.matches("[789]\\d{9}")) {
                 break;
             } else {
-				System.out.println("* * * Invalid Input please enter a 10-digit mobile number starting with 8,9 or 7 * * * ");
+				System.out.println(RED+"\n* * * Invalid Input please enter a 10-digit mobile number starting with 8,9 or 7 * * *\n"+RESET);
             }
         }
-        System.out.println("Your UPI_ID is " + mbNo + "@UPI\n");
+        System.out.print(YELLOW+"\nYour UPI_ID is " + mbNo + "@UPI\n"+RESET);
 
         while(true) {
             Random random = new Random();
 		    int paymentOPT = 1000 + random.nextInt(9000);
 
-            System.out.println("OTP is send to " + mbNo + " - - - (" + paymentOPT + ")\n");
+            System.out.println(BOLD+PURPLE+"OTP is send to " + mbNo + " - - - (" + paymentOPT + ")\n"+RESET);
     
-            System.out.print("> Enter OPT: ");
+            System.out.print(BLUE+"> Enter OPT: "+RESET);
             int OTP = sc.nextInt();
     
             if(paymentOPT == OTP) {
-                System.out.println("\n$ $ $ PAYMENT DONE $ $ $");
-                System.out.println("$ $ $ Tickets Booked Successfully $ $ $\n");
+                System.out.println(GREEN+"\n$ $ $ PAYMENT DONE $ $ $");
+                System.out.println("$ $ $ Tickets Booked Successfully $ $ $\n"+RESET);
                 break;
             } else {
-                System.out.println("\n* * * Wront OTP Entered. Please try Again! * * * \n");
+                System.out.println(RED+"\n* * * Wront OTP Entered. Please try Again! * * * \n"+RESET);
             }
         }
     }
@@ -42,9 +42,9 @@ class Payment{
     public static void run() {
         while (true) {
             int exit = 0;
-            System.out.println("1. Do you want to enter Mobile number for payment");
-            System.out.println("2. exit");
-            System.out.print("> Select an option: ");
+            System.out.println(YELLOW+"\n1. Do you want to enter Mobile number for payment"+RESET);
+            System.out.println(RED+"2. exit\n"+RESET);
+            System.out.print(BLUE+"> Select an option: "+RESET);
             int op = sc.nextInt();
             switch (op) {
                 case 1:
@@ -53,10 +53,10 @@ class Payment{
                     break;
                 case 2:
                     exit = 1;
-                    System.out.println("- - - - Thankyou. PLease visit again - - - -");
+                    System.out.println(magent+"- - - - Thankyou. PLease visit again - - - -"+RESET);
                     break;
                 default:
-                    System.out.println("Invalid option. Please select a valid option");
+                    System.out.println(RED+"\n* * * Invalid option. Please select a valid option * * *\n"+RESET);
                     break;
             }
             if(exit == 1) {
